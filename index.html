@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potfolio Taynara Araújo</title>
-    <link rel="stylesheet" href="style.css">
+    <title id="title-site">Potfolio</title>
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
@@ -23,16 +23,15 @@
                         <span></span>
                     </div>
                     <ul class="navlinks">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" id="text-home">Home</a></li>
+                        <li><a href="#resume" id="text-resume">Resume</a></li>
+                        <li><a href="#projects" id="text-projects">Projects</a></li>
+                        <li><a href="#contact" id="text-contact">Contact</a></li>
                         <li class="dropdown">
                             <!-- Dropdown to select idiom -->
                             <select id="language-selector">
                                 <option value="en">English</option>
-                                <option value="pt-br">Português (Brasil)</option>
-                                <option value="pt-pt">Português (Portugal)</option>
+                                <option value="pt-br">Português</option>
                             </select>
                         </li>
                     </ul>
@@ -43,21 +42,32 @@
                     <img src="images/main_photo.jpg" alt="profile-pic">
                 </div>
                 <div class="hero-text">
-                    <h5> Hi, I'm <span class="">Undergraduate Researcher</span></h5>
+                    <h5 id="text-h5"> Hi, I'm <span id="text-field">Undergraduate Researcher</span></h5>
                     <h1>Taynara Araújo</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet. Et voluptatibus enim et laudantium enim ab dolorem nisi et veniam deleniti et iure incidunt hic consequuntur excepturi. Ut exercitationem quia aut corporis veniam aut excepturi consequatur non praesentium praesentium. At facilis dolorem qui dignissimos explicabo et sequi pariatur quo labore enim ut dolorem libero et dicta corporis! Est internos fuga ut voluptatum iste id obcaecati earum!
+                    <p id="text-description">
+                        I'm a Computer Engineering student at the Pontifical Catholic University of Campinas (PUC-CAMPINAS) and a research the LISI laboratory in partnership with laboration AIoT by PUC-CAMPINAS. I'm passionate about technology and I'm always looking for new challenges and opportunities to learn and grow.
                     </p>
                     <div class="btn-group">
-                        <a href="#" class="btn active">Download CV</a>
+                        <a href="#" id="text-download-cv" class="btn active">Download CV</a>
                     </div>
                     <div class="social">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/tayaassis/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/taynara-ara%C3%BAjo/"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        var togglebtn = document.querySelector('.togglebtn');
+        var navlinks = document.querySelector('.navlinks');
+        var links = document.querySelectorAll('.navlinks li');
+
+        togglebtn.addEventListener("click",function(){
+            this.classList.toggle('click');
+            navlinks.classList.toggle('open');
+        })
+
+    </script>
 </body>
 </html>

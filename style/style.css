@@ -84,7 +84,7 @@ nav .navlinks li select{
     color: #391d34;
     background-color: #c9b8a8;
     cursor: pointer;
-    text-align: center;
+    margin: 0 auto;
     font-size: 16px;
 }
 .container{
@@ -178,17 +178,7 @@ nav .navlinks li select{
         top: 0;
     }
     nav .navlinks{
-        position: absolute;
-        top: 110px;
-        right: 0;
-        bottom: 0;
-        width: 60%;
-        height: 100vh;
-        background-color: #391d34;
-        z-index: 3;
-        box-shadow: -4px 14px 14px 0px rgba(0, 0, 0, 0.3);
-        transition: 0.5s;
-        padding: 25px 0px;
+        display: none;
     }
     nav .navlinks li{
         display: block;
@@ -207,7 +197,18 @@ nav .navlinks li select{
         margin: 0 auto;
     }
     nav .navlinks.open{
-        right: 0;
+        display: block;
+        position: absolute;
+        top: 110px;
+        right: 0%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #391d34;
+        z-index: 3;
+        box-shadow: -4px 14px 14px 0px rgba(0, 0, 0, 0.3);
+        transition: 0.5s;
+        padding: 25px 0px;
     }
     .container .hero-pic{
         display: block;
