@@ -61,22 +61,44 @@
             }
         }
 
+        // Translation of the site
+        function applyTranslation(language){
+            document.getElementById('title_site').textContent = translation[language].title_site;
+            document.getElementById('text_home').textContent = translation[language].text_home;
+            document.getElementById('text_resume').textContent = translation[language].text_resume;
+            document.getElementById('text_projects').textContent = translation[language].text_projects;
+            document.getElementById('text_contact').textContent = translation[language].text_contact;
+
+            // Make download the CV in English or Portuguese
+            const cvButton = document.getElementById('text_download_cv');
+
+            if(language === 'pt_br'){
+                cvButton.href = 'curriculum/CV_Taynara.pdf';
+            }
+
+            // Save the language in the dropdown
+            document.getElementById('language-selector').value = language;
+        }
+
+        document.getElementById('language-selector').addEventListener('change', function(){
+            const selectedLanguage = this.value;
+            applyTranslation(selectedLanguage);
+
+            // Save the language in sessionStorage
+            sessionStorage.setItem("language-selector", selectedLanguage);
+        });
+
+        // Load the selected language when opening the page
+        window.addEventListener('load', function(){
+            const savedLanguage = sessionStorage.getItem('language-selector'); // Get the language saved or use English as default
+            applyTranslation(savedLanguage || 'pt_br');
+        });
+        
         // Animation button toggle when it is clicked
         togglebtn.addEventListener("click",function(){
             this.classList.toggle('click');
             navlinks.classList.toggle('open');
         })
-
-        // Translation of the site
-        document.getElementById('language-selector').addEventListener('change', function(){
-            const selectedLanguage = this.value;
-            
-            document.getElementById('title_site').textContent = translation[selectedLanguage].title_site;
-            document.getElementById('text_home').textContent = translation[selectedLanguage].text_home;
-            document.getElementById('text_resume').textContent = translation[selectedLanguage].text_resume;
-            document.getElementById('text_projects').textContent = translation[selectedLanguage].text_projects;
-            document.getElementById('text_contact').textContent = translation[selectedLanguage].text_contact;
-        });
     </script>
 </body>
 </html>

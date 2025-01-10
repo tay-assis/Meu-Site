@@ -92,43 +92,41 @@
         }
 
         // Translation of the site
-        document.getElementById('language-selector').addEventListener('change', function(){
-            const selectedLanguage = this.value;
-            
-            document.getElementById('title_site').textContent = translation[selectedLanguage].title_site;
-            document.getElementById('text_home').textContent = translation[selectedLanguage].text_home;
-            document.getElementById('text_resume').textContent = translation[selectedLanguage].text_resume;
-            document.getElementById('text_projects').textContent = translation[selectedLanguage].text_projects;
-            document.getElementById('text_contact').textContent = translation[selectedLanguage].text_contact;
-            document.getElementById('text_h5').textContent = translation[selectedLanguage].text_h5;
-            document.getElementById('text_field').textContent = translation[selectedLanguage].text_field;
-            document.getElementById('text_description').textContent = translation[selectedLanguage].text_description;
-            document.getElementById('text_download_cv').textContent = translation[selectedLanguage].text_download_cv;
+        function applyTranslation(language){
+            document.getElementById('title_site').textContent = translation[language].title_site;
+            document.getElementById('text_home').textContent = translation[language].text_home;
+            document.getElementById('text_resume').textContent = translation[language].text_resume;
+            document.getElementById('text_projects').textContent = translation[language].text_projects;
+            document.getElementById('text_contact').textContent = translation[language].text_contact;
+            document.getElementById('text_h5').textContent = translation[language].text_h5;
+            document.getElementById('text_field').textContent = translation[language].text_field;
+            document.getElementById('text_description').textContent = translation[language].text_description;
+            document.getElementById('text_download_cv').textContent = translation[language].text_download_cv;
 
             // Make download the CV in English or Portuguese
             const cvButton = document.getElementById('text_download_cv');
 
-            if(selectedLanguage === 'pt_br'){
+            if(language === 'pt_br'){
                 cvButton.href = 'curriculum/CV_Taynara.pdf';
             }
 
-            // // Update dropdown select idiom value
-            // document.getElementById('language-selector').value = language;
+            // Save the language in the dropdown
+            document.getElementById('language-selector').value = language;
+        }
+
+        document.getElementById('language-selector').addEventListener('change', function(){
+            const selectedLanguage = this.value;
+            applyTranslation(selectedLanguage);
+
+            // Save the language in sessionStorage
+            sessionStorage.setItem("language-selector", selectedLanguage);
         });
 
-        // // Event to save the selected language in the local storage
-        // document.getElementById('language-selector').addEventListener('chance', function(){
-        //     const selectedLanguage = this.value;
-        //     localStorage.setItem('language', selectedLanguage); // Save the id of language selected
-        //     setLanguage(selectedLanguage); // Call the function to set the language
-        // });
-
-        // // Load the selected language when opening the page
-        // window.addEventListener('load', function(){
-        //     const savedLanguage = localStorage.getItem('language') || 'en'; // Get the language saved or use English as default
-        //     setLanguage(savedLanguage); // Add the language saved
-            
-        // });
+        // Load the selected language when opening the page
+        window.addEventListener('load', function(){
+            const savedLanguage = sessionStorage.getItem('language-selector'); // Get the language saved or use English as default
+            applyTranslation(savedLanguage || 'pt_br');
+        });
         
         // Animation button toggle when it is clicked
         togglebtn.addEventListener("click",function(){
