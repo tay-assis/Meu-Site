@@ -69,13 +69,6 @@
             document.getElementById('text_projects').textContent = translation[language].text_projects;
             document.getElementById('text_contact').textContent = translation[language].text_contact;
 
-            // Make download the CV in English or Portuguese
-            const cvButton = document.getElementById('text_download_cv');
-
-            if(language === 'pt_br'){
-                cvButton.href = 'curriculum/CV_Taynara.pdf';
-            }
-
             // Save the language in the dropdown
             document.getElementById('language-selector').value = language;
         }
