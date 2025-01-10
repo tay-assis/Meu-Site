@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/logo/logo_T.svg" type="image/x-icon">
+        <title id="title_site">Potfolio</title>
+        <link rel="stylesheet" href="style/style_index_page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-t"></i>
+                    <div class="logo-text">Taynara Araújo</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html" id="text_home">Home</a></li>
+                        <li><a href="resume_page.html" id="text_resume">Resume</a></li>
+                        <li><a href="projects_page.html" id="text_projects">Projects</a></li>
+                        <li><a href="contacts_page.html" id="text_contact">Contact</a></li>
+                        <li class="dropdown">
+                            <!-- Dropdown to select idiom -->
+                            <select id="language-selector">
+                                <option value="en">English</option>
+                                <option value="pt_br">Português</option>
+                            </select>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <script>
+        var togglebtn = document.querySelector('.togglebtn');
+        var navlinks = document.querySelector('.navlinks');
+        var links = document.querySelectorAll('.navlinks li');
+        const translation = {
+            en:{
+                title_site: "Portfolio",
+                text_home: "Home",
+                text_resume: "Resume",
+                text_projects: "Projects",
+                text_contact: "Contact",
+            },
+            pt_br:{
+                title_site: "Portfólio",
+                text_home: "Início",
+                text_resume: "Resumo",
+                text_projects: "Projetos",
+                text_contact: "Contato",
+            }
+        }
+
+        // Animation button toggle when it is clicked
+        togglebtn.addEventListener("click",function(){
+            this.classList.toggle('click');
+            navlinks.classList.toggle('open');
+        })
+
+        // Translation of the site
+        document.getElementById('language-selector').addEventListener('change', function(){
+            const selectedLanguage = this.value;
+            
+            document.getElementById('title_site').textContent = translation[selectedLanguage].title_site;
+            document.getElementById('text_home').textContent = translation[selectedLanguage].text_home;
+            document.getElementById('text_resume').textContent = translation[selectedLanguage].text_resume;
+            document.getElementById('text_projects').textContent = translation[selectedLanguage].text_projects;
+            document.getElementById('text_contact').textContent = translation[selectedLanguage].text_contact;
+        });
+    </script>
+</body>
+</html>
