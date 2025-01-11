@@ -146,6 +146,11 @@ nav .navlinks li select{
     border: 2px solid #c9b8a8;
     box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.3);
 }
+.btn-group .btn:hover{
+    transition: 0.5s;
+    background-color: #c9b8a8;
+    color: #391d34;
+}
 /* -------------------------------------------------- */
 @media(max-width: 930px){
     nav .togglebtn{
