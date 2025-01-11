@@ -162,6 +162,12 @@ nav .navlinks li select{
     color: white;
     transform: scale(1.2);
 }
+footer {
+    color: #c9b8a8;
+    text-align: center;
+    padding: 64px 0px 64px;
+    font-size: 0.9rem;
+}
 @media(max-width: 930px){
     nav .togglebtn{
         display: initial;

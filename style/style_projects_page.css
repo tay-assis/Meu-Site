@@ -89,14 +89,24 @@ nav .navlinks li select{
 }
 .container{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
-    text-align: center;    
+    padding: 64px 0px 64px;
+    text-align: center;
+    flex-direction: column;  
+}
+.line-1{
+    display: flex;
+    flex-direction: unset;
+    padding: 0px 0px 30px;
+}
+.line-2{
+    display: flex;
+    flex-direction: unset;
+    padding: 64px 0px 0px;
 }
 .hero-title{
     font-size: 1rem;
-    padding: 64px 0px 64px;
+    padding: 64px 0px 0px;
     text-align: center;
 }
 .hero-title h2{
@@ -107,8 +117,7 @@ nav .navlinks li select{
     color: white;
 }
 .hero-text{
-    float: left;
-    width: 100%;
+    padding: 0px 64px 0px;
 }
 .hero-text div.text{
     display: flex;
@@ -150,6 +159,12 @@ nav .navlinks li select{
     transition: 0.5s;
     background-color: #c9b8a8;
     color: #391d34;
+}
+footer {
+    color: #c9b8a8;
+    text-align: center;
+    padding: 0px 0px 64px;
+    font-size: 0.9rem;
 }
 /* -------------------------------------------------- */
 @media(max-width: 930px){

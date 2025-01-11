@@ -43,44 +43,51 @@
                 <p id="text_title_p"> In this page is some projects than I developed during my graduation:</p>
             </div>
             <div class="container">
-                <div class="hero-text">
-                    <h4 id="project_title">Título do Projeto 1</h4>
-                    <p id="text_description">
-                        Descrição do projeto
-                    </p>
-                    <div class="btn-group">
-                        <a href="#" id="text_repository" class="btn active">Repository</a>
+                <div class="line-1">
+                    <div class="hero-text">
+                        <h4 id="project_title">Título do Projeto 1</h4>
+                        <p id="text_description">
+                            Descrição do projeto
+                        </p>
+                        <div class="btn-group">
+                            <a href="#" id="text_repository" class="btn active">Repository</a>
+                        </div>
+                    </div>
+                    <div class="hero-text">
+                        <h4 id="project_title2">Título do Projeto 2</h4>
+                        <p id="text_description2">
+                            Descrição do projeto
+                        </p>
+                        <div class="btn-group">
+                            <a href="#" id="text_repository2" class="btn active">Repository</a>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-text">
-                    <h4 id="project_title2">Título do Projeto 2</h4>
-                    <p id="text_description2">
-                        Descrição do projeto
-                    </p>
-                    <div class="btn-group">
-                        <a href="#" id="text_repository2" class="btn active">Repository</a>
+                <div class="line-2">
+                    <div class="hero-text">
+                        <h4 id="project_title3">Título do Projeto 3</h4>
+                        <p id="text_description3">
+                            Descrição do projeto
+                        </p>
+                        <div class="btn-group">
+                            <a href="#" id="text_repository3" class="btn active">Repository</a>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-text">
-                    <h4 id="project_title3">Título do Projeto 3</h4>
-                    <p id="text_description3">
-                        Descrição do projeto
-                    </p>
-                    <div class="btn-group">
-                        <a href="#" id="text_repository3" class="btn active">Repository</a>
-                    </div>
-                </div>
-                <div class="hero-text">
-                    <h4 id="project_title4">Título do Projeto 4</h4>
-                    <p id="text_description4">
-                        Descrição do projeto
-                    </p>
-                    <div class="btn-group">
-                        <a href="#" id="text_repository4" class="btn active">Repository</a>
+                    <div class="hero-text">
+                        <h4 id="project_title4">Título do Projeto 4</h4>
+                        <p id="text_description4">
+                            Descrição do projeto
+                        </p>
+                        <div class="btn-group">
+                            <a href="#" id="text_repository4" class="btn active">Repository</a>
+                        </div>
                     </div>
                 </div>
             </div>
             </div>
+            <footer>
+                <p id="text_footer">&copy; Taynara Araújo <span id="year"></span> - <span id="footer_translation"></span></p>
+            </footer>
         </div>
     </div>
     <script>
@@ -108,6 +115,7 @@
                 project_title4: "Project Title 4",
                 text_description4: "Project description",
                 text_repository4: "Repository",
+                text_footer: "All rights reserved."
             },
             pt_br:{
                 title_site: "Portfólio",
@@ -129,8 +137,13 @@
                 project_title4: "Título do Projeto 4",
                 text_description4: "Descrição do projeto",
                 text_repository4: "Repositório",
+                text_footer: "Todos os direitos reservados."
             }
         }
+
+        // Update automatically the year in the footer
+        const yearSpan = document.getElementById('year');
+        yearSpan.textContent = new Date().getFullYear();
 
         // Translation of the site
         function applyTranslation(language){
@@ -153,6 +166,8 @@
             document.getElementById('project_title4').textContent = translation[language].project_title4;
             document.getElementById('text_description4').textContent = translation[language].text_description4;
             document.getElementById('text_repository4').textContent = translation[language].text_repository4;
+            document.getElementById('footer_translation').textContent = translation[language].text_footer;
+            
 
             // Save the language in the dropdown
             document.getElementById('language-selector').value = language;

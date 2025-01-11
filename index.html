@@ -60,6 +60,9 @@
                     </div>
                 </div>
             </div>
+            <footer>
+                <p id="text_footer">&copy; Taynara Araújo <span id="year"></span> - <span id="footer_translation"></span></p>
+            </footer>
         </div>
     </div>
     <script>
@@ -77,6 +80,7 @@
                 text_field: "Undergraduate Student Researcher",
                 text_description: "As an undergraduate student in Computer Engineering at the Pontifical Catholic University of Campinas (PUC-Campinas), I am passionate about technology and always seeking new challenges and opportunities to learn, grow, and develop.",
                 text_download_cv: "Download CV",
+                text_footer: "All rights are reserved.",
             },
             pt_br:{
                 title_site: "Portfólio",
@@ -88,8 +92,13 @@
                 text_field: "Estudante e Pesquisadora",
                 text_description: "Como graduanda do curso de Engenharia da Computação na Pontifícia Universidade Católica de Campinas, sou apaixonada por tecnologia e em busca de novos desafios e oportunidades para aprender, crescer e desenvolver.",
                 text_download_cv: "Baixar CV",
+                text_footer: "Todos os direitos reservados.",
             }
         }
+
+        // Update automatically the year in the footer
+        const yearSpan = document.getElementById('year');
+        yearSpan.textContent = new Date().getFullYear();
 
         // Translation of the site
         function applyTranslation(language){
@@ -102,6 +111,7 @@
             document.getElementById('text_field').textContent = translation[language].text_field;
             document.getElementById('text_description').textContent = translation[language].text_description;
             document.getElementById('text_download_cv').textContent = translation[language].text_download_cv;
+            document.getElementById('footer_translation').textContent = translation[language].text_footer;
 
             // Make download the CV in English or Portuguese
             const cvButton = document.getElementById('text_download_cv');
