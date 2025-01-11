@@ -87,6 +87,65 @@ nav .navlinks li select{
     margin: 0 auto;
     font-size: 16px;
 }
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    text-align: center;    
+}
+.hero-title{
+    font-size: 1rem;
+    padding: 30px 0px 30px;
+    text-align: center;
+}
+.hero-title h2{
+    font-size: 20px;
+    color: #c9b8a8;
+}
+.hero-title p{
+    color: white;
+}
+.hero-text{
+    float: left;
+    width: 100%;
+}
+.hero-text div.text{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero-text h5{
+    color: white;
+    font-size: 16px;
+    margin-right: 5px;
+}
+.hero-text h5.field{
+    color:#c9b8a8;
+    font-size: 16px;
+    align-self: column;
+}
+.hero-text h4{
+    color:#c9b8a8;
+    font-size: 20px;
+}
+.hero-text p{
+    color: white;
+}
+.btn-group{
+    margin: 45px 0;
+}
+.btn-group .btn{
+    border-color: #c9b8a8;
+    color: #c9b8a8;
+    background-color: #391d34;
+    padding: 12px 25px;
+    margin: 5px 0;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid #c9b8a8;
+    box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.3);
+}
 /* -------------------------------------------------- */
 @media(max-width: 930px){
     nav .togglebtn{
@@ -142,5 +201,12 @@ nav .navlinks li select{
         box-shadow: -4px 14px 14px 0px rgba(0, 0, 0, 0.3);
         transition: 0.5s;
         padding: 25px 0px;
+    }
+}
+@media(max-width: 768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
     }
 }

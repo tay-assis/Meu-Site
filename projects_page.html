@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="images/logo/logo_T.svg" type="image/x-icon">
         <title id="title_site">Potfolio</title>
-        <link rel="stylesheet" href="style/style_index_page.css">
+        <link rel="stylesheet" href="style/style_projects_page.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     </head>
 <body>
@@ -38,6 +38,49 @@
                     </ul>
                 </nav>
             </header>
+            <div class="hero-title">
+                <h2 id="text">Projects</h2>
+                <p id="text_title_p"> In this page is some projects than I developed during my graduation:</p>
+            </div>
+            <div class="container">
+                <div class="hero-text">
+                    <h4 id="project_title">Título do Projeto 1</h4>
+                    <p id="text_description">
+                        Descrição do projeto
+                    </p>
+                    <div class="btn-group">
+                        <a href="#" id="text_repository" class="btn active">Repository</a>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h4 id="project_title2">Título do Projeto 2</h4>
+                    <p id="text_description2">
+                        Descrição do projeto
+                    </p>
+                    <div class="btn-group">
+                        <a href="#" id="text_repository" class="btn active">Repository</a>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h4 id="project_title3">Título do Projeto 3</h4>
+                    <p id="text_description3">
+                        Descrição do projeto
+                    </p>
+                    <div class="btn-group">
+                        <a href="#" id="text_repository" class="btn active">Repository</a>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h4 id="project_title4">Título do Projeto 4</h4>
+                    <p id="text_description4">
+                        Descrição do projeto
+                    </p>
+                    <div class="btn-group">
+                        <a href="#" id="text_repository" class="btn active">Repository</a>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
     <script>
@@ -51,6 +94,17 @@
                 text_resume: "Resume",
                 text_projects: "Projects",
                 text_contact: "Contact",
+                text: "Projects",
+                text_title_p: "In this page is some projects than I developed during my graduation:",
+                project_title: "Project Title 1",
+                text_description: "Project description",
+                text_repository: "Repository",
+                project_title2: "Project Title 2",
+                text_description2: "Project description",
+                project_title3: "Project Title 3",
+                text_description3: "Project description",
+                project_title4: "Project Title 4",
+                text_description4: "Project description",
             },
             pt_br:{
                 title_site: "Portfólio",
@@ -58,6 +112,17 @@
                 text_resume: "Resumo",
                 text_projects: "Projetos",
                 text_contact: "Contato",
+                text: "Projetos",
+                text_title_p: "Nesta página estão alguns projetos que desenvolvi durante minha graduação:",
+                project_title: "Título do Projeto 1",
+                text_description: "Descrição do projeto",
+                text_repository: "Repositório",
+                project_title2: "Título do Projeto 2",
+                text_description2: "Descrição do projeto",
+                project_title3: "Título do Projeto 3",
+                text_description3: "Descrição do projeto",
+                project_title4: "Título do Projeto 4",
+                text_description4: "Descrição do projeto",
             }
         }
 
@@ -68,6 +133,17 @@
             document.getElementById('text_resume').textContent = translation[language].text_resume;
             document.getElementById('text_projects').textContent = translation[language].text_projects;
             document.getElementById('text_contact').textContent = translation[language].text_contact;
+            document.getElementById('text').textContent = translation[language].text;
+            document.getElementById('text_title_p').textContent = translation[language].text_title_p;
+            document.getElementById('project_title').textContent = translation[language].project_title;
+            document.getElementById('text_description').textContent = translation[language].text_description;
+            document.getElementById('text_repository').textContent = translation[language].text_repository;
+            document.getElementById('project_title2').textContent = translation[language].project_title2;
+            document.getElementById('text_description2').textContent = translation[language].text_description2;
+            document.getElementById('project_title3').textContent = translation[language].project_title3;
+            document.getElementById('text_description3').textContent = translation[language].text_description3;
+            document.getElementById('project_title4').textContent = translation[language].project_title4;
+            document.getElementById('text_description4').textContent = translation[language].text_description4;
 
             // Save the language in the dropdown
             document.getElementById('language-selector').value = language;
