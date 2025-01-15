@@ -126,6 +126,7 @@ nav .navlinks li select{
     color: #c9b8a8;
 }
 .hero-text p{
+    text-align: justify;
     color: white;
 }
 /* -------------------------------------------------- */

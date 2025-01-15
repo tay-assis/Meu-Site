@@ -136,6 +136,7 @@ nav .navlinks li select{
     font-size: 3rem;
 }
 .hero-text p{
+    text-align: justify;
     color: white;
 }
 .btn-group{
