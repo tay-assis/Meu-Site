@@ -110,11 +110,8 @@ nav .navlinks li select{
     text-align: center;
 }
 .hero-title h2{
-    font-size: 20px;
+    font-size: 25px;
     color: #c9b8a8;
-}
-.hero-title p{
-    color: white;
 }
 .hero-text{
     padding: 0px 64px 0px;
@@ -123,6 +120,7 @@ nav .navlinks li select{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    font-size: 30px;
 }
 .hero-text h5{
     color: white;
@@ -140,9 +138,15 @@ nav .navlinks li select{
 }
 .hero-text p{
     color: white;
+    padding-top: 10px;
 }
 .btn-group{
     margin: 45px 0;
+}
+.btn.disabled{
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 .btn-group .btn{
     border-color: #c9b8a8;
@@ -228,5 +232,9 @@ footer {
         display: flex;
         flex-direction: column;
         padding-top: 1rem;
+    }
+    .container .line-1, .line-2{
+        display: flex;
+        flex-direction: column;
     }
 }
