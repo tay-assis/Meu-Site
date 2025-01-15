@@ -87,6 +87,47 @@ nav .navlinks li select{
     margin: 0 auto;
     font-size: 16px;
 }
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0px 64px;
+}
+.container .hero-pic{
+    width: 300px;
+    height: auto;
+    border-radius: 30%;
+    overflow: hidden;
+    border: 3px solid #c9b8a8;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+.hero-pic img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.hero-pic img:hover{
+    transform: scale(1.2);
+}
+.hero-text{
+    margin-right: 30px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.hero-text div.text{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero-text h2{
+    font-size: 25px;
+    color: #c9b8a8;
+}
+.hero-text p{
+    color: white;
+}
 /* -------------------------------------------------- */
 @media(max-width: 930px){
     nav .togglebtn{
@@ -142,5 +183,15 @@ nav .navlinks li select{
         box-shadow: -4px 14px 14px 0px rgba(0, 0, 0, 0.3);
         transition: 0.5s;
         padding: 25px 0px;
+    }
+}
+@media screen and (max-width: 768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+    .hero-text{
+        padding: 40px 0px;
     }
 }
