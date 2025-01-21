@@ -98,6 +98,33 @@ nav .navlinks li select{
     max-width: 500px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.hero-text h2{
+    color:#c9b8a8
+}
+.hero-text p{
+    color: white;
+    margin-top: 10px;
+}
+.form-group{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.form-group input{
+    margin-bottom: 20px;
+    padding: 10px 15px;
+}
+.form-group label{
+    color:#c9b8a8;
+    margin-bottom: 10px;
+}
+.hero-text-icons{
+    display: flex;
+    flex-direction: column;
 }
 /* -------------------------------------------------- */
 @media(max-width: 930px){
