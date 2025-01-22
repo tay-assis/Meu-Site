@@ -108,6 +108,7 @@ nav .navlinks li select{
 .hero-text p{
     color: white;
     margin-top: 10px;
+    text-align: justify;
 }
 .form-group{
     font-size: 18px;

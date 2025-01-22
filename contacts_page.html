@@ -47,8 +47,8 @@
                         If you want to contact me, you can send me an email or follow me on social media.
                     </p>
                     <form class="form-group" method="post" action="email.php">
-                        <input type="text" name="name" id="input_name" placeholder="Enter your name">
-                        <input type="email" name="email" id="input_email" placeholder="Enter your e-mail">
+                        <input type="text" name="name" id="input_name" placeholder="Enter your name" autocomplete="name">
+                        <input type="email" name="email" id="input_email" placeholder="Enter your e-mail" autocomplete="email">
                         <textarea name="message" id="input_message" placeholder="Enter your message"></textarea>
                         <button type="submit" class="btn-group">Enviar</button>
                     </form>
@@ -76,7 +76,6 @@
                 title_text: "Contact me", 
                 text_description: "If you want to contact me, you can send me an email or follow me on social media.",
                 input_name: "Enter your name",
-                input_surname: "Enter your surname",
                 input_email: "Enter your e-mail",
                 input_message: "Enter your message",
             },
@@ -89,7 +88,6 @@
                 title_text: "Entre em contato",
                 text_description: "Se você deseja entrar em contato comigo, pode me enviar um e-mail ou me seguir nas redes sociais.",
                 input_name: "Digite seu nome",
-                input_surname: "Digite seu sobrenome",
                 input_email: "Digite seu e-mail",
                 input_message: "Digite sua mensagem",
 
@@ -106,7 +104,6 @@
             document.getElementById('title_text').textContent = translation[language].title_text;
             document.getElementById('text_description').textContent = translation[language].text_description;
             document.getElementById('input_name').setAttribute('placeholder', translation[language].input_name);
-            document.getElementById('input_surname').setAttribute('placeholder', translation[language].input_surname);
             document.getElementById('input_email').setAttribute('placeholder', translation[language].input_email);
             document.getElementById('input_message').setAttribute('placeholder', translation[language].input_message);
 
