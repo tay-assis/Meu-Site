@@ -90,13 +90,11 @@ nav .navlinks li select{
 .container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     padding-top: 4rem;
 }
 .hero-text{
-    margin-left: 30px;
     width: 100%;
-    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,23 +136,22 @@ nav .navlinks li select{
     width: 214px;
 }
 .hero-text-icons{
-    margin-left: 30px;
+    padding: 30px 170px 60px;
     width: 100%;
-    max-width: 500px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    justify-content: space-between;
 }
 .hero-text-icons a{
     display: flex;
-    margin-bottom: 15px;
+    margin: 10px;
     color: #c9b8a8;
-    font-size: 25px;
+    font-size: 16px;
     transition: 0.5s;
 }
 .hero-text-icons a i{
     margin-right: 10px;
-    font-size: 30px;
+    font-size: 20px;
 }
 .hero-text-icons a:hover{
     color: white;
@@ -230,10 +227,10 @@ nav .navlinks li select{
 @media screen and (max-width: 768px){
     .container{
         display: flex;
-        flex-direction: column;
         padding-top: 1rem;
     }
     .hero-text-icons{
-        padding: 40px 0px;
+        flex-direction: column;
+        align-items: center;
     }
 }
