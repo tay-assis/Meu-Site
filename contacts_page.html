@@ -47,21 +47,16 @@
                         If you want to contact me, you can send me an email or follow me on social media.
                     </p>
                     <div class="form-group">
-                        <label for="input_name">Name</label>
-                        <input type="text" class="input_name" id="input_name">
-                        <label for="input_surname">Surname</label>
-                        <input type="text" class="input_surname" id="input_surname">
-                        <label for="input_email">E-mail</label>
-                        <input type="email" class="input_email" id="input_email">
-                        <label for="input_message">Message</label>
-                        <textarea class="input_message" id="input_message"></textarea>
+                        <input type="text" class="input_name" id="input_name" placeholder="Enter your name">
+                        <input type="text" class="input_surname" id="input_surname" placeholder="Enter your surname">
+                        <input type="email" class="input_email" id="input_email" placeholder="Enter your e-mail">
+                        <textarea class="input_message" id="input_message" placeholder="Enter your message..."></textarea>
                     </div>
                 </div>
                 <div class="hero-text-icons">
                     <a href="https://www.instagram.com/tayaassis/"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/taynara-ara%C3%BAjo/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/tay-assis"><i class="fa-brands fa-github"></i></a>
-                    <a href=""><i class="fa-brands fa-"/a>
                 </div>
             </div>
         </div>
@@ -77,6 +72,12 @@
                 text_resume: "Resume",
                 text_projects: "Projects",
                 text_contact: "Contact",
+                title_text: "Contact me", 
+                text_description: "If you want to contact me, you can send me an email or follow me on social media.",
+                input_name: "Enter your name",
+                input_surname: "Enter your surname",
+                input_email: "Enter your e-mail",
+                input_message: "Enter your message",
             },
             pt_br:{
                 title_site: "Portfólio",
@@ -84,6 +85,13 @@
                 text_resume: "Resumo",
                 text_projects: "Projetos",
                 text_contact: "Contato",
+                title_text: "Entre em contato",
+                text_description: "Se você deseja entrar em contato comigo, pode me enviar um e-mail ou me seguir nas redes sociais.",
+                input_name: "Digite seu nome",
+                input_surname: "Digite seu sobrenome",
+                input_email: "Digite seu e-mail",
+                input_message: "Digite sua mensagem",
+
             }
         }
 
@@ -94,6 +102,12 @@
             document.getElementById('text_resume').textContent = translation[language].text_resume;
             document.getElementById('text_projects').textContent = translation[language].text_projects;
             document.getElementById('text_contact').textContent = translation[language].text_contact;
+            document.getElementById('title_text').textContent = translation[language].title_text;
+            document.getElementById('text_description').textContent = translation[language].text_description;
+            document.getElementById('input_name').setAttribute('placeholder', translation[language].input_name);
+            document.getElementById('input_surname').setAttribute('placeholder', translation[language].input_surname);
+            document.getElementById('input_email').setAttribute('placeholder', translation[language].input_email);
+            document.getElementById('input_message').setAttribute('placeholder', translation[language].input_message);
 
             // Save the language in the dropdown
             document.getElementById('language-selector').value = language;
