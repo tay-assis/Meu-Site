@@ -46,12 +46,12 @@
                     <p id="text_description">
                         If you want to contact me, you can send me an email or follow me on social media.
                     </p>
-                    <div class="form-group">
-                        <input type="text" class="input_name" id="input_name" placeholder="Enter your name">
-                        <input type="text" class="input_surname" id="input_surname" placeholder="Enter your surname">
-                        <input type="email" class="input_email" id="input_email" placeholder="Enter your e-mail">
-                        <textarea class="input_message" id="input_message" placeholder="Enter your message..."></textarea>
-                    </div>
+                    <form class="form-group" method="post" action="email.php">
+                        <input type="text" name="name" id="input_name" placeholder="Enter your name">
+                        <input type="email" name="email" id="input_email" placeholder="Enter your e-mail">
+                        <textarea name="message" id="input_message" placeholder="Enter your message"></textarea>
+                        <button type="submit" class="btn-group">Enviar</button>
+                    </form>
                 </div>
                 <div class="hero-text-icons">
                     <a href="https://www.instagram.com/tayaassis/" target="_blank"><i class="fa-brands fa-instagram"></i>tayaassis</a>
