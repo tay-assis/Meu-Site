@@ -111,10 +111,11 @@ nav .navlinks li select{
     transform: scale(1.2);
 }
 .hero-text{
-    margin-right: 30px;
+    
     max-width: 500px;
     display: flex;
     flex-direction: column;
+    padding: 30px;
 }
 .hero-text div.text{
     display: flex;

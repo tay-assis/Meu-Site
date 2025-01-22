@@ -140,6 +140,7 @@ nav .navlinks li select{
 .hero-text p{
     color: white;
     padding-top: 10px;
+    text-align: justify;
 }
 .btn-group{
     margin: 45px 0;
