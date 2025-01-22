@@ -109,7 +109,7 @@ nav .navlinks li select{
     color:#391d34
 }
 .hero-text p{
-    color: white;
+    color: #391d34;
     margin-top: 10px;
 }
 .form-group{
@@ -140,8 +140,26 @@ nav .navlinks li select{
     width: 214px;
 }
 .hero-text-icons{
+    margin-left: 30px;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.hero-text-icons a{
+    display: flex;
+    margin-bottom: 10px;
+    color: #c9b8a8;
+    font-size: 25px;
+    transition: 0.5s;
+}
+.hero-text-icons a i{
+    margin-right: 10px;
+    font-size: 30px;
+}
+.hero-text-icons a:hover{
+    color: white;
 }
 /* -------------------------------------------------- */
 @media(max-width: 930px){
