@@ -162,7 +162,7 @@ nav .navlinks li select{
     color: white;
 }
 /* -------------------------------------------------- */
-@media(max-width: 930px){
+@media screen and (max-width: 930px){
     nav .togglebtn{
         display: initial;
     }
@@ -216,5 +216,15 @@ nav .navlinks li select{
         box-shadow: -4px 14px 14px 0px rgba(0, 0, 0, 0.3);
         transition: 0.5s;
         padding: 25px 0px;
+    }
+}
+@media screen and (max-width: 768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+    .hero-text-icons{
+        padding: 40px 0px;
     }
 }
