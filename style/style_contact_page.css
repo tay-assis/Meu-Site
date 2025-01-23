@@ -116,6 +116,7 @@ nav .navlinks li select{
     margin-top: 20px;
 }
 .form-group input{
+    width: 300px;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #c9b8a8;
@@ -133,7 +134,7 @@ nav .navlinks li select{
     border-radius: 5px;
     font-size: 16px;
     height: 81px;
-    width: 214px;
+    width: 300px;
 }
 .hero-text-icons{
     padding: 30px 170px 60px;

@@ -111,7 +111,6 @@ nav .navlinks li select{
     transform: scale(1.2);
 }
 .hero-text{
-    
     max-width: 500px;
     display: flex;
     flex-direction: column;
@@ -124,9 +123,11 @@ nav .navlinks li select{
 }
 .hero-text h2{
     font-size: 25px;
+    padding: 0px 0px 10px;
     color: #c9b8a8;
 }
 .hero-text p{
+    padding-top: 5px;
     text-align: justify;
     color: white;
 }
