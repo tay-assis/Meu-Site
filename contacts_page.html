@@ -46,11 +46,11 @@
                     <p id="text_description">
                         If you want to contact me, you can send me an email or follow me on social media.
                     </p>
-                    <form class="form-group" method="post" action="email.php">
+                    <form class="form-group" method="post" action="send-email/email.php">
                         <input type="text" name="name" id="input_name" placeholder="Enter your name" autocomplete="name">
                         <input type="email" name="email" id="input_email" placeholder="Enter your e-mail" autocomplete="email">
                         <textarea name="message" id="input_message" placeholder="Enter your message"></textarea>
-                        <button type="submit" class="btn-group">Enviar</button>
+                        <button type="submit" class="btn-group" name="send">Enviar</button>
                     </form>
                 </div>
                 <div class="hero-text-icons">
@@ -78,6 +78,7 @@
                 input_name: "Enter your name",
                 input_email: "Enter your e-mail",
                 input_message: "Enter your message",
+                btn: "Send",
             },
             pt_br:{
                 title_site: "Portfólio",
@@ -90,6 +91,7 @@
                 input_name: "Digite seu nome",
                 input_email: "Digite seu e-mail",
                 input_message: "Digite sua mensagem",
+                btn: "Enviar",
 
             }
         }
@@ -106,6 +108,7 @@
             document.getElementById('input_name').setAttribute('placeholder', translation[language].input_name);
             document.getElementById('input_email').setAttribute('placeholder', translation[language].input_email);
             document.getElementById('input_message').setAttribute('placeholder', translation[language].input_message);
+            document.querySelector('.btn-group').textContent = translation[language].btn;
 
             // Save the language in the dropdown
             document.getElementById('language-selector').value = language;
