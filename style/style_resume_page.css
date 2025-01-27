@@ -3,7 +3,7 @@ section.resume{
     display: flex;
     justify-content: space-between;
     min-height: 100vh;
-    padding-top: 80px;
+    padding-top: 180px;
 }
 .container .hero-pic{
     width: 300px;

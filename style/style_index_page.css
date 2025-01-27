@@ -6,6 +6,7 @@
     text-decoration: none;
 }
 body{
+    margin-top: 80px;
     overflow-x: hidden;
     background-color: #391d34
 }
@@ -16,6 +17,12 @@ body{
     padding: 0 20px;    
 }
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #391d34;
     padding: 40px 0 30px;
     display: flex;
     justify-content: space-between;
@@ -97,7 +104,7 @@ section.home {
     display: flex;
     justify-content: space-between;
     min-height: 100vh;
-    padding-top: 80px;
+    padding-top: 180px;
 }
 .container .hero-pic{
     max-width: 300px;
