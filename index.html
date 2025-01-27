@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo/logo_T.svg" type="image/x-icon">
-    <title id="title_site">Potfolio</title>
+    <title id="title_site">Portfolio</title>
     <link rel="stylesheet" href="style/style_index_page.css">
+    <link rel="stylesheet" href="style/style_resume_page.css">
+    <link rel="stylesheet" href="style/style_projects_page.css">
+    <link rel="stylesheet" href="style/style_contact_page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
@@ -24,9 +27,9 @@
                         <span></span>
                     </div>
                     <ul class="navlinks">
-                        <li><a href="index.html" id="text_home">Home</a></li>
-                        <li><a href="resume_page.html" id="text_resume">Resume</a></li>
-                        <li><a href="projects_page.html" id="text_projects">Projects</a></li>
+                        <li><a href="#home" id="text_home">Home</a></li>
+                        <li><a href="#resume" id="text_resume">Resume</a></li>
+                        <li><a href="#projects" id="text_projects">Projects</a></li>
                         <li><a href="contacts_page.html" id="text_contact">Contact</a></li>
                         <li class="dropdown">
                             <!-- Dropdown to select idiom -->
@@ -39,111 +42,101 @@
                 </nav>
             </header>
             <div class="container">
-                <div class="hero-pic">
-                    <img src="images/main_photo.jpg" alt="profile-pic">
-                </div>
-                <div class="hero-text">
-                    <div class="text">
-                        <h5 id="text_h5"> Hi, I'm</h5>
-                        <h5 id="text_field" class="field">Undergraduate Researcher</h5>
+                <!-- Home Section -->
+                <section id="home" class="home">
+                    <div class="hero-pic">
+                        <img src="images/main_photo.jpg" alt="profile-pic">
                     </div>
-                    <h1>Taynara Araújo</h1>
-                    <p id="text_description">
-                        I'm a Computer Engineering student at the Pontifical Catholic University of Campinas (PUC-CAMPINAS) and a research the LISI laboratory in partnership with laboration AIoT by PUC-CAMPINAS. I'm passionate about technology and I'm always looking for new challenges and opportunities to learn and grow.
-                    </p>
-                    <div class="btn-group">
-                        <a href="curriculum/CV_Taynara_EN.pdf" id="text_download_cv" class="btn active">Download CV</a>
+                    <div class="hero-text">
+                        <div class="text">
+                            <h5 id="text_h5">Hi, I'm</h5>
+                            <h5 id="text_field" class="field">Undergraduate Researcher</h5>
+                        </div>
+                        <h1>Taynara Araújo</h1>
+                        <p id="text_description">
+                            I'm a Computer Engineering student at the Pontifical Catholic University of Campinas (PUC-CAMPINAS) and a researcher at the LISI laboratory in partnership with AIoT by PUC-CAMPINAS. I'm passionate about technology and always seeking new challenges and opportunities to learn and grow.
+                        </p>
+                        <div class="btn-group">
+                            <a href="curriculum/CV_Taynara_EN.pdf" id="text_download_cv" class="btn active" target="_blank">Download CV</a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.instagram.com/tayaassis/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/taynara-ara%C3%BAjo/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/tay-assis" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
-                    <div class="social">
-                        <a href="https://www.instagram.com/tayaassis/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/taynara-ara%C3%BAjo/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/tay-assis" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </section>
+                <!-- Resume Section -->
+                <section id="resume" class="resume">
+                    <div class="hero-text">
+                        <h2 id="title_text">About me</h2>
+                        <p id="text_description2">
+                            I have a strong passion for problem-solving and innovation in the field of computer engineering. My journey in academia has provided me with valuable technical and research skills, which I aim to further develop in my career.
+                        </p>
+                        <p id="text_description3">
+                            My experiences include collaborative projects in artificial intelligence, IoT, and software development, which have allowed me to grow both technically and professionally.
+                        </p>
+                        <p id="text_description4">
+                            I am dedicated to continuous learning and development, always seeking to contribute meaningfully to my team and projects.
+                        </p>
                     </div>
-                </div>
+                    <div class="hero-pic">
+                        <img src="images/main_photo_3.jpg" alt="profile-pic">
+                    </div>
+                </section>
+                <!-- Projects Section -->
+                <section id="projects" class="projects">
+                    <div class="hero-title">
+                        <h2 id="text">Projects</h2>
+                    </div>
+                    <div class="container">
+                        <div class="line-1">
+                            <div class="hero-text">
+                                <h4 id="project_title"></h4>
+                                <p id="text_description5"></p>
+                                <div class="btn-group">
+                                    <a href="#" id="text_repository" class="btn active disabled"></a>
+                                </div>
+                            </div>
+                            <div class="hero-text">
+                                <h4 id="project_title2"></h4>
+                                <p id="text_description6"></p>
+                                <div class="btn-group">
+                                    <a href="https://github.com/tay-assis/SimulatorR8" id="text_repository2" class="btn active"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section id="contact" class="contact">
+                    <div class="hero-text2">
+                        <h2 id="title_text2">
+                            Contact me
+                        </h2>
+                        <p id="text_description7">
+                            If you want to contact me, you can send me an email or follow me on social media.
+                        </p>
+                        <form class="form-group" method="post" action="/email.php">
+                            <input type="text" name="name" id="input_name" placeholder="Enter your name" autocomplete="name">
+                            <input type="email" name="email" id="input_email" placeholder="Enter your e-mail" autocomplete="email">
+                            <textarea name="message" id="input_message" placeholder="Enter your message"></textarea>
+                            <button type="submit" class="btn-group-contact" name="send">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="hero-text-icons">
+                        <a href="https://www.instagram.com/tayaassis/" target="_blank"><i class="fa-brands fa-instagram"></i>tayaassis</a>
+                        <a href="https://www.linkedin.com/in/taynara-ara%C3%BAjo/" target="_blank"><i class="fa-brands fa-linkedin"></i>Taynara Araújo</a>
+                        <a href="https://github.com/tay-assis" target="_blank"><i class="fa-brands fa-github"></i>tay-assis</a>
+                        <a href="https://wa.me/5512991481980" target="_blank"><i class="fa-brands fa-whatsapp"></i>(12) 99148-1980</a>
+                    </div>
+                </section>
             </div>
             <footer>
                 <p id="text_footer">&copy; Taynara Araújo <span id="year"></span> - <span id="footer_translation"></span></p>
             </footer>
         </div>
     </div>
-    <script>
-        var togglebtn = document.querySelector('.togglebtn');
-        var navlinks = document.querySelector('.navlinks');
-        var links = document.querySelectorAll('.navlinks li');
-        const translation = {
-            en:{
-                title_site: "Portfolio",
-                text_home: "Home",
-                text_resume: "Resume",
-                text_projects: "Projects",
-                text_contact: "Contact",
-                text_h5: "Hi, I'm",
-                text_field: "Undergraduate Student Researcher",
-                text_description: "As an undergraduate student in Computer Engineering at the Pontifical Catholic University of Campinas (PUC-Campinas), I am passionate about technology and always seeking new challenges and opportunities to learn, grow, and develop.",
-                text_download_cv: "Download CV",
-                text_footer: "All rights are reserved.",
-            },
-            pt_br:{
-                title_site: "Portfólio",
-                text_home: "Início",
-                text_resume: "Resumo",
-                text_projects: "Projetos",
-                text_contact: "Contato",
-                text_h5: "Olá, eu sou",
-                text_field: "Estudante e Pesquisadora",
-                text_description: "Como graduanda do curso de Engenharia da Computação na Pontifícia Universidade Católica de Campinas, sou apaixonada por tecnologia e em busca de novos desafios e oportunidades para aprender, crescer e desenvolver.",
-                text_download_cv: "Baixar CV",
-                text_footer: "Todos os direitos reservados.",
-            }
-        }
-
-        // Update automatically the year in the footer
-        const yearSpan = document.getElementById('year');
-        yearSpan.textContent = new Date().getFullYear();
-
-        // Translation of the site
-        function applyTranslation(language){
-            document.getElementById('title_site').textContent = translation[language].title_site;
-            document.getElementById('text_home').textContent = translation[language].text_home;
-            document.getElementById('text_resume').textContent = translation[language].text_resume;
-            document.getElementById('text_projects').textContent = translation[language].text_projects;
-            document.getElementById('text_contact').textContent = translation[language].text_contact;
-            document.getElementById('text_h5').textContent = translation[language].text_h5;
-            document.getElementById('text_field').textContent = translation[language].text_field;
-            document.getElementById('text_description').textContent = translation[language].text_description;
-            document.getElementById('text_download_cv').textContent = translation[language].text_download_cv;
-            document.getElementById('footer_translation').textContent = translation[language].text_footer;
-
-            // Make download the CV in English or Portuguese
-            const cvButton = document.getElementById('text_download_cv');
-
-            if(language === 'pt_br'){
-                cvButton.href = 'curriculum/CV_Taynara.pdf';
-            }
-
-            // Save the language in the dropdown
-            document.getElementById('language-selector').value = language;
-        }
-
-        document.getElementById('language-selector').addEventListener('change', function(){
-            const selectedLanguage = this.value;
-            applyTranslation(selectedLanguage);
-
-            // Save the language in sessionStorage
-            sessionStorage.setItem("language-selector", selectedLanguage);
-        });
-
-        // Load the selected language when opening the page
-        window.addEventListener('load', function(){
-            const savedLanguage = sessionStorage.getItem('language-selector'); // Get the language saved or use English as default
-            applyTranslation(savedLanguage || 'pt_br');
-        });
-        
-        // Animation button toggle when it is clicked
-        togglebtn.addEventListener("click",function(){
-            this.classList.toggle('click');
-            navlinks.classList.toggle('open');
-        })
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

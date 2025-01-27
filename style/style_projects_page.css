@@ -1,99 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: poppins,sans-serif;
-    text-decoration: none;
-}
-body{
-    overflow-x: hidden;
-    overflow-y: hidden;
-    background-color: #391d34
-}
-.hero-header{
-    width: 1280px;
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 0 20px;    
-}
-header{
-    padding: 40px 0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.logo{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-.logo i{
-    height: 45px;
-    width: 45px;
-    background-color: white;
-    border-radius: 50%;
-    color: #5a3044;
-    font-weight: 700;
-    font-size: 1.5rem;
-    padding: 10px;
-    margin-right: 5px;
-    cursor: pointer;
+section.projects{
     text-align: center;
-}
-.logo .logo-text{
-    font-size: 24px;
-    font-weight: 500;
-    color: white;
-}
-nav .togglebtn{
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    top: 45px;
-    right: 3%;
-    z-index: 5;
-    cursor: pointer;
-    display: none;
-}
-nav .togglebtn span{
-    display: block;
-    background-color: white;
-    margin: 5px 0px;
-    width: 100%;
-    height: 3px;
-    transition: 0.3s;
-    transition-property: transform, opacity;
-}
-nav .navlinks{
-    list-style-type: none;
-}
-nav .navlinks li{
-    display: inline-block;
-}
-nav .navlinks li a{
-    color: white;
-    margin-right: 2.5rem;
-}
-nav .navlinks li.dropdown{
-    margin-right: 2.5rem;
-}
-nav .navlinks li select{
-    padding: 7px 7px;
-    border: 2px solid #c9b8a8;
-    border-radius: 10px;
-    color: #391d34;
-    background-color: #c9b8a8;
-    cursor: pointer;
-    margin: 0 auto;
-    font-size: 16px;
-}
-.container{
-    display: flex;
-    align-items: center;
-    padding: 64px 0px 64px;
-    text-align: center;
-    flex-direction: column;  
 }
 .line-1{
     display: flex;
@@ -113,9 +19,6 @@ nav .navlinks li select{
 .hero-title h2{
     font-size: 25px;
     color: #c9b8a8;
-}
-.hero-text{
-    padding: 0px 64px 0px;
 }
 .hero-text div.text{
     display: flex;
@@ -165,69 +68,6 @@ nav .navlinks li select{
     transition: 0.5s;
     background-color: #c9b8a8;
     color: #391d34;
-}
-footer {
-    color: #c9b8a8;
-    text-align: center;
-    padding: 0px 0px 64px;
-    font-size: 0.9rem;
-}
-/* -------------------------------------------------- */
-@media(max-width: 930px){
-    nav .togglebtn{
-        display: initial;
-    }
-    .click{
-        top: 45px;
-    }
-    .click span{
-        position: absolute;
-        margin-top: 12px;
-    }
-    .click span:first-child{
-        transform: rotate(-40deg);
-    }
-    .click span:nth-child(2){
-        opacity: 0;
-        margin: 0;
-    }
-    .click span:last-child{
-        transform: rotate(45deg);
-        top: 0;
-    }
-    nav .navlinks{
-        display: none;
-    }
-    nav .navlinks li{
-        display: block;
-    }
-    nav .navlinks li a{
-        display: block;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    nav .navlinks li.dropdown{
-        display: block;
-        margin-bottom: 15px;
-    }
-    nav .navlinks li select{
-        display: block;
-        margin: 0 auto;
-    }
-    nav .navlinks.open{
-        display: block;
-        position: absolute;
-        top: 110px;
-        right: 0%;
-        bottom: 0;
-        width: 60%;
-        height: 100vh;
-        background-color: #391d34;
-        z-index: 3;
-        box-shadow: -4px 14px 14px 0px rgba(0, 0, 0, 0.3);
-        transition: 0.5s;
-        padding: 25px 0px;
-    }
 }
 @media(max-width: 768px){
     .container{

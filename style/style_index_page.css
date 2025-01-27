@@ -90,12 +90,18 @@ nav .navlinks li select{
 .container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 4rem;
+    flex-direction: column;
+}
+section.home {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: 80px;
 }
 .container .hero-pic{
-    width: 300px;
-    height: auto;
+    max-width: 300px;
+    max-height: 300px;
     border-radius: 30%;
     overflow: hidden;
     border: 3px solid #c9b8a8;
@@ -233,10 +239,14 @@ footer {
 }
 @media screen and (max-width: 768px){
     .container{
-        flex-direction: column;
         padding-top: 2rem;
     }
+    section{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
     .hero-text{
-        padding: 40px 0px;
+        padding: 0px 40px;
     }
 }
