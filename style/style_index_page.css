@@ -23,7 +23,7 @@ header{
     width: 100%;
     z-index: 1000;
     background-color: #391d34;
-    padding: 40px 0 30px;
+    padding: 40px 30px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
