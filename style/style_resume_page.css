@@ -26,7 +26,7 @@ section.resume{
     max-width: 500px;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 0px 30px;
 }
 .hero-text div.text{
     display: flex;
@@ -47,5 +47,8 @@ section.resume{
     .container{
         display: flex;
         padding-top: 2rem;
+    }
+    .hero-text{
+        padding: 30px 0px;
     }
 }

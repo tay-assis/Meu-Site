@@ -5,7 +5,7 @@ section.projects{
 .line-1{
     display: flex;
     flex-direction: unset;
-    padding: 0px 0px 30px;
+    padding: 30px 0px 30px;
 }
 .line-2{
     display: flex;
@@ -21,32 +21,35 @@ section.projects{
     font-size: 25px;
     color: #c9b8a8;
 }
-.hero-text div.text{
+.hero-text3{
+    padding: 0px 30px;
+}
+.hero-text3 div.text{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     font-size: 30px;
 }
-.hero-text h5{
+.hero-text3 h5{
     color: white;
     font-size: 16px;
     margin-right: 5px;
 }
-.hero-text h5.field{
+.hero-text3 h5.field{
     color:#c9b8a8;
     font-size: 16px;
     align-self: column;
 }
-.hero-text h4{
+.hero-text3 h4{
     color:#c9b8a8;
     font-size: 20px;
 }
-.hero-text p{
+.hero-text3 p{
     color: white;
     padding-top: 10px;
     text-align: justify;
 }
-.btn-group{
+.btn-group3{
     margin: 45px 0;
 }
 .btn.disabled{
@@ -54,10 +57,10 @@ section.projects{
     opacity: 0.6;
     cursor: not-allowed;
 }
-.btn-group .btn{
+.btn-group3 .btn{
     border-color: #c9b8a8;
-    color: #c9b8a8;
-    background-color: #391d34;
+    color: #391d34;
+    background-color: #c9b8a8;
     padding: 12px 25px;
     margin: 5px 0;
     margin-right: 7px;
@@ -65,7 +68,7 @@ section.projects{
     border: 2px solid #c9b8a8;
     box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.3);
 }
-.btn-group .btn:hover{
+.btn-group3 .btn:hover{
     transition: 0.5s;
     background-color: #c9b8a8;
     color: #391d34;
@@ -79,5 +82,8 @@ section.projects{
     .container .line-1, .line-2{
         display: flex;
         flex-direction: column;
+    }
+    .hero-text3{
+        padding: 30px 0px;
     }
 }

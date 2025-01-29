@@ -125,6 +125,15 @@
                             <textarea name="message" id="input_message" placeholder="Enter your message"></textarea>
                             <button type="submit" class="btn-group-contact" name="send">Enviar</button>
                         </form>
+                        <?php
+                            session_start();
+                            
+                            if (isset($_SESSION['message'])) {
+                                $messageType = $_SESSION['message']['type'] === 'success' ? 'success' : 'error';
+                                echo "<div class='message $messageType'>{$_SESSION['message']['text']}</div>";
+                                unset($_SESSION['message']); // Limpa a mensagem após exibi-la
+                            }
+                        ?>
                     </div>
                     <div class="hero-text-icons">
                         <a href="https://www.instagram.com/tayaassis/" target="_blank"><i class="fa-brands fa-instagram"></i>tayaassis</a>

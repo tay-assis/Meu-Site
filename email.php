@@ -14,7 +14,7 @@ if (isset($_POST['send'])){
 
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -31,19 +31,33 @@ if (isset($_POST['send'])){
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Mensagem via Site - Portifólio Taynara';
+        $mail->Subject = "Menssagem via Site - Portifólio Taynara";
 
-        $body = " Mensagem Enviada via site, segue informações abaixo: <br>
+        $body = "Segue as informações abaixo: <br>
                 Nome: ". $_POST['name']."<br>
                 Email: ".$_POST['email']."<br>
                 Mensagem: ".$_POST['message'];
         $mail->Body = $body;
 
         $mail->send();
-        echo 'Message has been sent';
+        $_SESSION['message'] = [
+            'type' => 'success',
+            'text' => 'Sua mensagem foi enviada com sucesso! Obrigada por entrar em contato.'
+        ];
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        $_SESSION['message'] = [
+            'type' => 'error',
+            'text' => "Não foi possível enviar sua mensagem. Por favor, tente novamente mais tarde."
+        ];
     }
-}else{
-    echo "Wrong request send email";
+    header('Location: index.php#contact');
+    exit;
+} else {
+    $_SESSION['message'] = [
+        'type' => 'error',
+        'text' => 'Requisição inválida.'
+    ];
+    header('Location: index.php#contact');
+    exit;
 }
+?>
