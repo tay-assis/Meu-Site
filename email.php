@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 
-if (isset($_POST['send'])){
+if (!empty($_POST['message']) && isset($_POST['send'])){
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
 
@@ -34,7 +34,7 @@ if (isset($_POST['send'])){
         $mail->Subject = "Menssagem via Site - Portifólio Taynara";
 
         $body = "Segue as informações abaixo: <br>
-                Nome: ". $_POST['name']."<br>
+                Nome: ".$_POST['name']."<br>
                 Email: ".$_POST['email']."<br>
                 Mensagem: ".$_POST['message'];
         $mail->Body = $body;
