@@ -34,7 +34,7 @@ body{
     background-color: #391d34;
     color: #c9b8a8;
     border: #c9b8a8 2px solid;
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 15px;
     transition: 0.3s;
 }
