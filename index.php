@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,14 +124,6 @@ session_start();
                             <input type="text" name="name" id="input_name" placeholder="Enter your name" autocomplete="name">
                             <input type="email" name="email" id="input_email" placeholder="Enter your e-mail" autocomplete="email">
                             <textarea name="message" id="input_message" placeholder="Enter your message"></textarea>
-                            
-                            <?php if(!empty($_SESSION['message'])) { ?>
-                            <div class="message sucess">
-                                <strong><?php echo $_SESSION['message']; ?></strong>
-                            </div>
-                            <?php unset($_SESSION['message']); ?>
-                            <?php } ?>    
-                            
                             <button type="submit" class="btn-group-contact" name="send">Enviar</button>
                         </form>
                     </div>
