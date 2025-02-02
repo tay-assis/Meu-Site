@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 
-if (!empty($_POST['message']) && isset($_POST['send'])){
+if (!empty($_POST['message']) && !empty($_POST['email']) && isset($_POST['send'])){
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
 
@@ -40,7 +40,7 @@ if (!empty($_POST['message']) && isset($_POST['send'])){
     header('Location: sucess.html');
     exit;
 } else {
-    header('Location: index.php#contact');
+    header('Location: error.html');
     exit;
 }
 ?>
